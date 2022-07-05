@@ -122,6 +122,16 @@ public class AcmeBankTests {
         eyes.check(Target.window().fully().withName("Main page").layout());
     }
 
+    @Test
+    public void containerPokeTest() {
+        driver.get("http://localhost:8080");
+        eyes.check(Target.window().fully().withName("ContainerPoke Main Page"));
+        driver.findElement(By.id("pingButton")).click();
+        eyes.check(Target.window().fully().withName("ContainerPoke Main Page"));
+        driver.findElement(By.id("pingButton")).click();
+        eyes.check(Target.window().fully().withName("ContainerPoke Main Page"));
+    }
+
     @AfterEach
     public void cleanUpTest() {
 

@@ -19,6 +19,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M6</version>
+                <!--    You can set your APPLITOOLS_API_KEY env var for the `mvn test` goal
+                        by swapping in your own API key into this configuration entry.
+                <configuration>
+                    <environmentVariables>
+                        <APPLITOOLS_API_KEY>YOUR_API_TOOLS_KEY</APPLITOOLS_API_KEY>
+                    </environmentVariables>
+                </configuration>
+                -->
             </plugin>
         </plugins>
     </build>
